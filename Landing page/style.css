@@ -63,10 +63,15 @@ body{
 }
 
 .section1-col-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* .section1-col-2{
     display: flex;
     align-items: center;
     text-align: start;
-}
+} */
 
 .section1-col-2>div{
     flex:1;
@@ -131,9 +136,7 @@ body{
     color:#fff;
     background-color: var(--background-text);
 }
-.switch-img{
 
-}
 .section2-img{
     display: flex;
     justify-content: center;
@@ -143,4 +146,97 @@ body{
     width: 65%;
     border-radius: 1em;
     padding: 2rem;
+}
+
+/* Section 3*/
+
+.section3-half-background{
+    background-color: rgba(46, 213, 115, 50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 300px;
+}
+
+.section3-half-background > .section3-left, .section3-right{
+    color:#4f4f4f;
+    font-size: 1.7em;
+    width: 500px;
+    
+}
+
+.spring, .bike{
+    position: absolute;
+}
+
+.spring{
+    left: -10px;
+    top: 30px;
+}
+.section3-containers{
+    display: flex;
+    gap:24px;
+    flex-direction: column;
+    padding: 5em;
+}
+
+.section3-containers:nth-child(1){grid-area: d1;}
+.section3-containers:nth-child(2){grid-area: d2;}
+.section3-containers:nth-child(3){grid-area: d3;}
+.section3-containers:nth-child(4){grid-area: d4;}
+.section3-containers:nth-child(5){grid-area: d5;}
+.section3-containers:nth-child(6){grid-area: d6;}
+
+.section3-half-transparent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "d1 . . d2"
+    "d3 d4 d5 d6";
+
+}
+
+.section4{
+    padding: 0 9em 1em 9em;
+}
+
+.section4-left-right{
+    display: flex;
+    justify-content: space-between;
+    padding: 7em 0;
+}
+
+.section4-top-left{
+    font-size: 2em;
+    width: 45%;
+}
+
+.section4-container > .content > .title-desc > .content-title{
+    font-size: 2.7em;
+}
+
+.title-desc{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    padding: 2em 3em 5em 3em;
+}
+
+.section4-container{
+    display: flex;
+    gap:1em;
+}
+.content{
+    flex:1;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.content-button{
+    padding: 1em 3em;
+    border-radius: 0 0 10px 10px;
+}
+
+.content-button:nth-child(2){
+    background-color: #FFD281;
 }
